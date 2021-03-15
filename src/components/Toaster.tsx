@@ -1,5 +1,5 @@
 import { Button } from "@chakra-ui/button";
-import { useToast } from "@chakra-ui/toast";
+import { ToastPosition, useToast } from "@chakra-ui/toast";
 import React from "react";
 
 interface ToasterProps {}
@@ -30,7 +30,7 @@ export const Toaster: React.FC<ToasterProps> = ({}) => {
             duration: 9000,
             isClosable: false,
             variant: variants[rndVariant],
-            position: positions[rndPosition],
+            position: positions[rndPosition] as ToastPosition,
           });
         }
       }}
