@@ -1,5 +1,9 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
+.inner {
+  transform: rotateY(180deg);
+}
+.cardForm {
+  transform: rotateY(180deg);
+}
+::placeholder {
+  opacity: 1;
 }

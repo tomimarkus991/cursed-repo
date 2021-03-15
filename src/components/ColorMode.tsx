@@ -3,7 +3,7 @@ import React from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 interface ColorModeProps {
-  buttonSize: "xs" | "sm" | "md" | "lg";
+  buttonSize: string;
   mLeft?: string;
 }
 
@@ -13,7 +13,7 @@ const ColorMode: React.FC<ColorModeProps> = ({ buttonSize, mLeft }) => {
   return (
     <IconButton
       icon={colorMode === "light" ? <FaMoon /> : <FaSun />}
-      onClick={toggleColorMode}
+      onDoubleClick={toggleColorMode}
       aria-label="Switch color-mode"
       variant="outline"
       size={buttonSize}
